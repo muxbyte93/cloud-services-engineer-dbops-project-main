@@ -30,6 +30,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO migrations;
 ```
 
 -- Количество заказанных сосисок по дням за последние 7 суток
+```sql
 SELECT
   o.date_created,                
   SUM(op.quantity) AS total_sold
@@ -43,3 +44,4 @@ GROUP BY
   o.date_created
 ORDER BY
   o.date_created;
+```
