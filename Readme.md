@@ -14,6 +14,11 @@ CREATE ROLE migrations LOGIN PASSWORD '!123';
 GRANT USAGE ON SCHEMA public TO migrations;
 ```
 
+-- разрешаем создавать объекты в схеме public (нужно для работы Flyway)
+```sql
+GRANT CREATE ON SCHEMA public TO migrations;
+```
+
 -- предоставляем полный доступ к уже существующим таблицам в этой схеме
 ```sql
 GRANT ALL ON ALL TABLES IN SCHEMA public TO migrations;
