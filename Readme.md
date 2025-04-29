@@ -6,7 +6,7 @@ CREATE DATABASE store;
 
 -- добавляем отдельную роль для выполнения миграций
 ```sql
-CREATE ROLE migrations LOGIN PASSWORD '!123';
+CREATE ROLE migrations LOGIN PASSWORD '1';
 ```
 
 -- разрешаем обращаться к объектам схемы public
